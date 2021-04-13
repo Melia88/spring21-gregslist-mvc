@@ -6,8 +6,9 @@ import { api } from "./AxiosService.js";
 class HousesService {
   async getHouses() {
     let res = await api.get('houses')
-    console.log(res.data)
+    // console.log(res.data)
     ProxyState.houses = res.data.map(h => new House(h))
+    console.log(ProxyState.houses)
   }
 
   async createHouse(newHouse) {

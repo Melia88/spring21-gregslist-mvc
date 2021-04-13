@@ -3,8 +3,8 @@ export default class Job{
     this.company = company
     this.description = description
     this.jobTitle = jobTitle
-    this.hours = hours
-    this.rate = rate
+    this.hours = hours || ''
+    this.rate = rate || ''
     this.id = id
   }
   get Template() {
